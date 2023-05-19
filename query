@@ -1,0 +1,14 @@
+
+data insert:
+
+insert into BangLuong(heSoLuong,bacLuong,luongCoban,maNV) values('1','1','11','2')
+insert into ChucVu(tenCV,maNV) values('test','2')
+insert into PhongBan(tenPB,diaChi,sdt,maNV) values('CNTT','HCM','00112233','2')
+insert into TrinhDoHocVan(tenTrinhDo,chuyenNghanh,maNV) values('Cao D','HHTT','2')
+
+insert into NhanVien(name,email,phone,address,gender,birthday) values ('Na','ny@gmail.com','0523757194','HCM','Female','22/01/1987')
+
+data query:
+select name,email,phone,address,gender,birthday,tenCV as 'Position',tenPB as 'Deparment',luongCoban as 'Wage' from NhanVien nv, ChucVu cv, PhongBan pb,BangLuong bl where nv.maNV=cv.maNV and nv.maNV=pb.maNV and nv.maNV=bl.maNV 
+
+
